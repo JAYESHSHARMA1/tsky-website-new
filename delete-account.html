@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="max-image-preview:large">
+    <title>Delete Account – TasKey</title>
+    <style id="tsky-block-site-logo-inline-css">
+        .tsky-block-site-logo {
+            box-sizing: border-box;
+            line-height: 0
+        }
+
+        .tsky-block-site-logo a {
+            display: inline-block;
+            line-height: 0
+        }
+
+        .tsky-block-site-logo.is-default-size img {
+            height: auto;
+            width: 120px
+        }
+
+        .tsky-block-site-logo img {
+            height: auto;
+            max-width: 100%
+        }
+
+        .tsky-block-site-logo a,
+        .tsky-block-site-logo img {
+            border-radius: inherit
+        }
+
+        .tsky-block-site-logo.aligncenter {
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center
+        }
+
+        :root :where(.tsky-block-site-logo.is-style-rounded) {
+            border-radius: 9999px
+        }
+    </style>
+    <style id="tsky-block-site-title-inline-css">
+        .tsky-block-site-title {
+            box-sizing: border-box
+        }
+
+        .tsky-block-site-title :where(a) {
+            color: inherit;
+            font-family: inherit;
+            font-size: inherit;
+            font-style: inherit;
+            font-weight: inherit;
+            letter-spacing: inherit;
+            line-height: inherit;
+            text-decoration: inherit
+        }
+    </style>
+    <style id="tsky-block-group-inline-css">
+        .tsky-block-group {
+            box-sizing: border-box
+        }
+
+        :where(.tsky-block-group.tsky-block-group-is-layout-constrained) {
+            position: relative
+        }
+    </style>
+    <style id="tsky-block-navigation-link-inline-css">
+        .tsky-block-navigation .tsky-block-navigation-item__label {
+            overflow-wrap: break-word
+        }
+
+        .tsky-block-navigation .tsky-block-navigation-item__description {
+            display: none
+        }
+
+        .link-ui-tools {
+            border-top: 1px solid #f0f0f0;
+            padding: 8px
+        }
+
+        .link-ui-block-inserter {
+            padding-top: 8px
+        }
+
+        .link-ui-block-inserter__back {
+            margin-left: 8px;
+            text-transform: uppercase
+        }
+    </style>
+
+    <style id="tsky-block-button-inline-css">
+        .tsky-block-button__link {
+            align-content: center;
+            box-sizing: border-box;
+            cursor: pointer;
+            display: inline-block;
+            height: 100%;
+            justify-content: center;
+            line-height: 1;
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            transition: all .1s ease-in-out;
+            width: auto
+        }
+
+        .tsky-block-button__link:active:not(.tsky-block-button__link-is-placeholder) {
+            transform: translateY(2px)
+        }
+
+        .tsky-block-button__link.tsky-block-button__width-full {
+            width: 100%
+        }
+
+        .tsky-block-button__link.tsky-block-button__width-fit {
+            width: fit-content
+        }
+    </style>
+
+    <style id="tsky-block-buttons-inline-css">
+        .tsky-block-buttons {
+            box-sizing: border-box;
+            display: flex;
+            flex-wrap: wrap;
+            gap: .5em;
+            justify-content: flex-start
+        }
+
+        .tsky-block-buttons.is-content-justification-center {
+            justify-content: center
+        }
+
+        .tsky-block-buttons.is-content-justification-right {
+            justify-content: flex-end
+        }
+
+        .tsky-block-buttons.is-content-justification-space-between {
+            justify-content: space-between
+        }
+
+        .tsky-block-buttons.wp-block-buttons-is-layout-flex {
+            gap: .5em
+        }
+
+        .tsky-block-buttons.wp-block-buttons-is-layout-grid {
+            grid-auto-flow: row;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
+        }
+
+        .tsky-block-buttons .tsky-block-button__link {
+            margin: 0
+        }
+    </style>
+
+    <style id="global-styles-inline-css">
+        :root {
+            --tsky--preset--aspect-ratio--square: 1;
+            --tsky--preset--aspect-ratio--4-3: 4/3;
+            --tsky--preset--aspect-ratio--3-4: 3/4;
+            --tsky--preset--aspect-ratio--3-2: 3/2;
+            --tsky--preset--aspect-ratio--2-3: 2/3;
+            --tsky--preset--aspect-ratio--16-9: 16/9;
+            --tsky--preset--aspect-ratio--9-16: 9/16;
+            --tsky--preset--color--black: #000000;
+            --tsky--preset--color--cyan-bluish-gray: #abb8c3;
+            --tsky--preset--color--white: #ffffff;
+            --tsky--preset--color--pale-pink: #f78da7;
+            --tsky--preset--color--vivid-red: #cf2e2e;
+            --tsky--preset--color--luminous-vivid-orange: #ff6900;
+            --tsky--preset--color--luminous-vivid-amber: #fcb900;
+            --tsky--preset--color--light-green-cyan: #7bdcb5;
+            --tsky--preset--color--vivid-green-cyan: #00d084;
+            --tsky--preset--color--pale-cyan-blue: #8ed1fc;
+            --tsky--preset--color--vivid-cyan-blue: #0693e3;
+            --tsky--preset--color--vivid-purple: #9b51e0;
+            --tsky--preset--color--primary: #0b303b;
+            --tsky--preset--color--secondary: #0b303b;
+            --tsky--preset--color--foreground: #0b303b;
+            --tsky--preset--color--background: #fef4ee;
+            --tsky--preset--color--tertiary: #F0F0F0;
+            --tsky--preset--color--custom-orange: #ff9c61;
+            --tsky--preset--color--custom-green: #e2fdc7;
+            --tsky--preset--color--custom-purple: #5454d2;
+        }
+
+        :root {
+            --tsky--style--global--content-size: 620px;
+            --tsky--style--global--wide-size: 1400px;
+        }
+
+        :where(body) {
+            margin: 0;
+        }
+
+        .tsky-site-blocks {
+            padding-top: var(--tsky--style--root--padding-top);
+            padding-bottom: var(--tsky--style--root--padding-bottom);
+        }
+
+        .has-global-padding {
+            padding-right: var(--tsky--style--root--padding-right);
+            padding-left: var(--tsky--style--root--padding-left);
+        }
+
+        .has-global-padding>.alignfull {
+            margin-right: calc(var(--tsky--style--root--padding-right) * -1);
+            margin-left: calc(var(--tsky--style--root--padding-left) * -1);
+        }
+
+        .has-global-padding :where(:not(.alignfull.is-layout-flow) > .has-global-padding:not(.tsky-block-block, .alignfull)) {
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+        .has-global-padding :where(:not(.alignfull.is-layout-flow) > .has-global-padding:not(.tsky-block-block, .alignfull))>.alignfull {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .tsky-site-blocks>.alignleft {
+            float: left;
+            margin-right: 2em;
+        }
+
+        .tsky-site-blocks>.alignright {
+            float: right;
+            margin-left: 2em;
+        }
+
+        .tsky-site-blocks>.aligncenter {
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        :where(.tsky-site-blocks)>* {
+            margin-block-start: 1.5rem;
+            margin-block-end: 0;
+        }
+
+        :where(.tsky-site-blocks)> :first-child {
+            margin-block-start: 0;
+        }
+
+        :where(.tsky-site-blocks)> :last-child {
+            margin-block-end: 0;
+        }
+
+        :root {
+            --tsky--style--block-gap: 1.5rem;
+        }
+
+        :root :where(.is-layout-flow)> :first-child {
+            margin-block-start: 0;
+        }
+
+        :root :where(.is-layout-flow)> :last-child {
+            margin-block-end: 0;
+        }
+
+        :root :where(.is-layout-flow)>* {
+            margin-block-start: 1.5rem;
+            margin-block-end: 0;
+        }
+
+        :root :where(.is-layout-constrained)> :first-child {
+            margin-block-start: 0;
+        }
+
+        :root :where(.is-layout-constrained)> :last-child {
+            margin-block-end: 0;
+        }
+
+        :root :where(.is-layout-constrained)>* {
+            margin-block-start: 1.5rem;
+            margin-block-end: 0;
+        }
+
+        :root :where(.is-layout-flex) {
+            gap: 1.5rem;
+        }
+
+        :root :where(.is-layout-grid) {
+            gap: 1.5rem;
+        }
+
+        .is-layout-flow>.alignleft {
+            float: left;
+            margin-inline-start: 0;
+            margin-inline-end: 2em;
+        }
+
+        .is-layout-flow>.alignright {
+            float: right;
+            margin-inline-start: 2em;
+            margin-inline-end: 0;
+        }
+
+        .is-layout-flow>.aligncenter {
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        .is-layout-constrained>.alignleft {
+            float: left;
+            margin-inline-start: 0;
+            margin-inline-end: 2em;
+        }
+
+        .is-layout-constrained>.alignright {
+            float: right;
+            margin-inline-start: 2em;
+            margin-inline-end: 0;
+        }
+
+        .is-layout-constrained>.aligncenter {
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        .is-layout-constrained> :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+            max-width: var(--tsky--style--global--content-size);
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+
+        .is-layout-constrained>.alignwide {
+            max-width: var(--tsky--style--global--wide-size);
+        }
+
+        body .is-layout-flex {
+            display: flex;
+        }
+
+        .is-layout-flex {
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .is-layout-flex> :is(*, div) {
+            margin: 0;
+        }
+
+        body .is-layout-grid {
+            display: grid;
+        }
+
+        .is-layout-grid> :is(*, div) {
+            margin: 0;
+        }
+
+        html {
+            min-height: calc(100% - var(--tsky-admin--admin-bar--height, 0px));
+        }
+
+        body {
+            background: linear-gradient(127deg, rgb(190, 185, 242) 0%, rgb(197, 180, 217) 29%, rgb(252, 217, 210) 65%, rgb(197, 180, 217) 100%);
+            background-color: var(--tsky--preset--color--background);
+            color: var(--tsky--preset--color--foreground);
+            font-family: var(--tsky--preset--font-family--sora);
+            font-size: var(--tsky--preset--font-size--small);
+            font-style: normal;
+            font-weight: 200;
+            line-height: 1.6;
+            --tsky--style--root--padding-top: 0px;
+            --tsky--style--root--padding-right: 0px;
+            --tsky--style--root--padding-bottom: 0px;
+            --tsky--style--root--padding-left: 0px;
+        }
+
+        a:where(:not(.tsky-element-button)) {
+            color: var(--tsky--preset--color--primary);
+            text-decoration: underline;
+        }
+
+        :root :where(a:where(:not(.tsky-element-button)):hover) {
+            text-decoration: none;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 400;
+            line-height: 1.125;
+        }
+
+        h1 {
+            font-size: var(--tsky--preset--font-size--x-large);
+        }
+
+        h2 {
+            font-size: var(--tsky--preset--font-size--large);
+        }
+
+        h3 {
+            font-size: clamp(1.5rem, calc(1.5rem + ((1vw - 0.48rem) * 0.4808)), 1.75rem);
+        }
+
+        h4 {
+            font-size: clamp(1.25rem, calc(1.25rem + ((1vw - 0.48rem) * 0.4808)), 1.5rem);
+        }
+
+        h5 {
+            font-size: var(--tsky--preset--font-size--medium);
+        }
+
+        h6 {
+            font-size: var(--tsky--preset--font-size--small);
+        }
+
+        :root :where(.tsky-element-button, .tsky-block-button__link) {
+            background-color: var(--tsky--preset--color--primary);
+            border-radius: 0.25rem;
+            border-width: 0;
+            color: var(--tsky--preset--color--background);
+            font-family: inherit;
+            font-size: inherit;
+            line-height: inherit;
+            padding-top: calc(0.667em + 2px);
+            padding-right: calc(1.333em + 2px);
+            padding-bottom: calc(0.667em + 2px);
+            padding-left: calc(1.333em + 2px);
+            text-decoration: none;
+        }
+
+        :root :where(.tsky-element-button:hover, .tsky-block-button__link:hover) {
+            background-color: var(--tsky--preset--color--secondary);
+            color: var(--tsky--preset--color--background);
+        }
+
+        :root :where(.tsky-element-button:focus, .tsky-block-button__link:focus) {
+            background-color: var(--tsky--preset--color--primary);
+            color: var(--tsky--preset--color--background);
+            outline-color: var(--tsky--preset--color--primary);
+            outline-offset: 2px;
+            outline-style: dotted;
+            outline-width: 1px;
+        }
+
+        :root :where(.tsky-element-button:active, .tsky-block-button__link:active) {
+            background-color: var(--tsky--preset--color--primary);
+            color: var(--tsky--preset--color--background);
+        }
+
+        :root :where(.tsky-element-caption) {
+            font-size: 0.8rem;
+        }
+
+        .has-text-align-center {
+            text-align: center
+        }
+
+        .has-text-align-left {
+            text-align: left
+        }
+
+        .has-text-align-right {
+            text-align: right
+        }
+
+        .screen-reader-text {
+            word-wrap: normal !important;
+            border: 0;
+            clip-path: inset(50%);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px
+        }
+
+        .screen-reader-text:focus {
+            background-color: #ddd;
+            clip-path: none;
+            color: #444;
+            display: block;
+            font-size: 1em;
+            height: auto;
+            left: 5px;
+            line-height: normal;
+            padding: 15px 23px 14px;
+            text-decoration: none;
+            top: 5px;
+            width: auto;
+            z-index: 100000
+        }
+
+        :root :where(figure) {
+            margin: 0 0 1em
+        }
+
+        html :where(.is-position-sticky) {
+            --tsky-admin--admin-bar--position-offset: var(--tsky-admin--admin-bar--height, 0px)
+        }
+
+        @media screen and (max-width:600px) {
+            html :where(.is-position-sticky) {
+                --tsky-admin--admin-bar--position-offset: 0px
+            }
+        }
+
+        :root {
+            --tsky--preset--font-size--small: clamp(0.825rem, 0.825rem + ((1vw - 0.2rem) * 0.353), 1.0625rem);
+            --tsky--preset--font-size--medium: clamp(1rem, 1rem + ((1vw - 0.2rem) * 0.37), 1.25rem);
+            --tsky--preset--font-size--large: clamp(1.75rem, 1.75rem + ((1vw - 0.2rem) * 0.37), 2rem);
+            --tsky--preset--font-size--x-large: clamp(2.5rem, 2.5rem + ((1vw - 0.2rem) * 0.741), 3rem);
+            --tsky--preset--font-family--sora: Sora;
+        }
+
+        .wp-block-spacer {
+            clear: both;
+        }
+
+        .wp-block-spacer.has-background {
+            background-color: inherit;
+            height: 100px;
+            margin: 0;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        .is-style-paragraph-emphasis {
+            border-left: 4px solid var(--tsky--preset--color--custom-orange);
+            padding-left: 1.5rem;
+        }
+
+        ol,
+        ul {
+            margin-bottom: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+
+    <style id="tsky-block-template-skip-link-inline-css">
+        .skip-link.screen-reader-text {
+            border: 0;
+            clip: rect(1px, 1px, 1px, 1px);
+            clip-path: inset(50%);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute !important;
+            width: 1px;
+            word-wrap: normal !important;
+        }
+
+        .skip-link.screen-reader-text:focus {
+            background-color: #eee;
+            clip: auto !important;
+            clip-path: none;
+            color: #444;
+            display: block;
+            font-size: 1em;
+            height: auto;
+            left: 5px;
+            line-height: normal;
+            padding: 15px 23px 14px;
+            text-decoration: none;
+            top: 5px;
+            width: auto;
+            z-index: 100000;
+        }
+    </style>
+</head>
+
+<body class="tsky-site-blocks">
+    <div class="tsky-site-blocks">
+        <div class="tsky-block-template-part">
+            <header class="tsky-block-template-part"
+                style="border-top-color:var(--tsky--preset--color--primary);border-top-style:solid;border-top-width:1px;border-right-style:none;border-right-width:0px;border-bottom-style:none;border-bottom-width:0px;border-left-style:none;border-left-width:0px">
+                <div class="tsky-block-group has-global-padding is-layout-constrained tsky-container-core-group-is-layout-20 tsky-block-group-is-layout-constrained"
+                    style="padding-top:40px;padding-right:20px;padding-bottom:40px;padding-left:20px">
+                    <div class="tsky-block-group alignwide is-layout-flex tsky-container-core-group-is-layout-1 tsky-block-group-is-layout-flex"
+                        style="border-top-style:none;border-top-width:0px;border-right-style:none;border-right-width:0px;border-bottom-style:none;border-bottom-width:0px;border-left-style:none;border-left-width:0px;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px">
+                        <div class="tsky-block-site-logo"><a href="/" class="custom-logo-link" rel="home"><img width="26"
+                                    height="26" src="../tskywebcontent/tsky-content/uploads/2022/04/0-e28093-2-6.png"
+                                    class="custom-logo" alt="TasKey" decoding="async" data-attachment-id="121"
+                                    data-permalink="../0-e28093-2-6/"
+                                    data-orig-file="../tsky-content/uploads/2022/04/0-e28093-2-6.png"
+                                    data-orig-size="5120,5120"></a></div>
+                        <h1 class="tsky-block-site-title"><a href=".">TasKey</a></h1>
+                    </div>
+                </div>
+            </header>
+        </div>
+
+        <main class="tsky-site-blocks is-layout-constrained wp-block-group">
+            <div class="tsky-block-group has-global-padding is-layout-constrained tsky-container-core-group-is-layout-23 tsky-block-group-is-layout-constrained"
+                style="padding-top:60px;padding-right:20px;padding-bottom:100px;padding-left:20px">
+                <h1>Delete Your Account</h1>
+
+                <p>We understand that you may want to delete your TasKey account at any time. This page explains the
+                    simple process to delete your account.</p>
+
+                <h2>Steps to Delete Your Account</h2>
+
+                <p>Follow these simple steps to delete your TasKey account:</p>
+
+                <ol>
+                    <li><strong>Open TasKey App:</strong> Launch the TasKey application on your device.</li>
+                    <li><strong>Go to Settings Tab:</strong> Navigate to the Settings tab within the app.</li>
+                    <li><strong>Select Delete Account:</strong> Look for and select the "Delete Account" option in the settings menu.</li>
+                    <li><strong>Confirm Deletion:</strong> A confirmation popup will appear. Select "Delete Account" to confirm. Once pressed, your account will be permanently deleted.</li>
+                </ol>
+
+                <h2>Need Help?</h2>
+
+                <p>If you have any questions about deleting your account or need assistance:</p>
+
+                <ul>
+                    <li><strong>Email:</strong> <a
+                            href="mailto:admin@taskeyutility.in">admin@taskeyutility.in</a></li>
+                </ul>
+
+                <div style="height:var(--wp--preset--spacing--40)" aria-hidden="true" class="wp-block-spacer"></div>
+
+                <div style="border-left: 4px solid #cf2e2e; padding-left: 1.5rem; background-color: rgba(207, 46, 46, 0.05); padding: 1.5rem; padding-left: 1.5rem;">
+                    <p><strong>Important Notice:</strong> Account deletion is a non-reversible process. Once your account is deleted, all data associated with your account will be permanently removed. You are solely responsible for this action and its consequences. TasKey accepts no liability for data loss resulting from account deletion.</p>
+                </div>
+
+                <div style="height:var(--wp--preset--spacing--80)" aria-hidden="true" class="wp-block-spacer"></div>
+            </div>
+        </main>
+
+        <footer class="tsky-block-template-part">
+            <div class="tsky-block-group has-global-padding is-layout-constrained tsky-container-core-group-is-layout-20 tsky-block-group-is-layout-constrained"
+                style="padding-top:60px;padding-right:20px;padding-bottom:140px;padding-left:20px">
+                <div class="tsky-block-group alignwide is-content-justification-space-between is-layout-flex tsky-container-core-group-is-layout-15 tsky-block-group-is-layout-flex"
+                    style="border-top-color:var(--tsky--preset--color--primary);border-top-style:solid;border-top-width:1px;border-right-style:none;border-right-width:0px;border-bottom-style:none;border-bottom-width:0px;border-left-style:none;border-left-width:0px;padding-top:60px">
+
+                    <ul class="tsky-block-social-links has-small-icon-size has-icon-color is-style-logos-only is-layout-flex tsky-block-social-links-is-layout-flex"
+                        style="list-style: none;">
+                        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="/terms-and-conditions.html">Terms & Conditions</a></li>
+                        <li><a href="/delete-account.html">Delete Account</a></li>
+                    </ul>
+                </div>
+
+                <div style="height:var(--wp--preset--spacing--80)" aria-hidden="true" class="wp-block-spacer"></div>
+
+                <div
+                    class="tsky-block-group alignwide has-global-padding is-layout-constrained tsky-container-core-group-is-layout-19 tsky-block-group-is-layout-constrained">
+                    <div class="tsky-block-group alignwide is-content-justification-space-between is-nowrap is-layout-flex tsky-container-core-group-is-layout-18 tsky-block-group-is-layout-flex"
+                        style="border-top-style:none;border-top-width:0px;border-right-style:none;border-right-width:0px;border-bottom-style:none;border-bottom-width:0px;border-left-style:none;border-left-width:0px;padding-top:20px;padding-right:0px;padding-bottom:20px;padding-left:0px">
+                        <div
+                            class="tsky-block-group is-vertical is-layout-flex tsky-container-core-group-is-layout-17 tsky-block-group-is-layout-flex">
+                            <div
+                                class="tsky-block-group is-nowrap is-layout-flex tsky-container-core-group-is-layout-16 tsky-block-group-is-layout-flex">
+                                <div class="tsky-block-site-logo"><a href="/" class="custom-logo-link" rel="home"><img
+                                            width="26" height="26"
+                                            src="../tskywebcontent/tsky-content/uploads/2022/04/0-e28093-2-6.png"
+                                            class="custom-logo" alt="TasKey" decoding="async"
+                                            data-attachment-id="121"></a></div>
+
+                                <h1 class="tsky-block-site-title"><a href=".">TasKey</a></h1>
+                            </div>
+
+                            <p>taskeyutility®</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script crossorigin="anonymous" type="text/javascript"
+        src="../s1.tsky.com/tsky-content/js/mobile-useragent-info_m%3D1609849039i.js"></script>
+    <script id="tsky-block-template-skip-link-js-after">
+        (function () {
+            var skipLinkTarget = document.querySelector('main'),
+                sibling,
+                skipLinkTargetID,
+                skipLink;
+
+            // Early exit if a skip-link target can't be located.
+            if (!skipLinkTarget) {
+                return;
+            }
+
+            /*
+             * Get the site wrapper.
+             * The skip-link will be injected in the beginning of it.
+             */
+            sibling = document.querySelector('.tsky-site-blocks');
+
+            // Early exit if the root element was not found.
+            if (!sibling) {
+                return;
+            }
+
+            // Get the skip-link target's ID, and generate one if it doesn't exist.
+            skipLinkTargetID = skipLinkTarget.id;
+            if (!skipLinkTargetID) {
+                skipLinkTargetID = 'tsky--skip-link--target';
+                skipLinkTarget.id = skipLinkTargetID;
+            }
+
+            // Create the skip link.
+            skipLink = document.createElement('a');
+            skipLink.classList.add('skip-link', 'screen-reader-text');
+            skipLink.href = '#' + skipLinkTargetID;
+            skipLink.innerHTML = 'Skip to content';
+
+            // Inject the skip link.
+            sibling.parentElement.insertBefore(skipLink, sibling);
+        }());
+
+    </script>
+    <script type="text/javascript">
+        // <![CDATA[
+        (function () {
+            try {
+                if (window.external && 'msIsSiteMode' in window.external) {
+                    if (window.external.msIsSiteMode()) {
+                        var jl = document.createElement('script');
+                        jl.type = 'text/javascript';
+                        jl.async = true;
+                        jl.src = '/tsky-content/plugins/ie-sitemode/custom-jumplist.php';
+                        var s = document.getElementsByTagName('script')[0];
+                        s.parentNode.insertBefore(jl, s);
+                    }
+                }
+            } catch (e) { }
+        })();
+// ]]>
+    </script>
+
+    <noscript><img src="https://pixel.tsky.com/b.gif?v=noscript"
+            style="height:1px;width:1px;overflow:hidden;position:absolute;bottom:1px;" alt="" /></noscript>
+    <script defer="" id="bilmur" data-provider="wordpress.com" data-service="simple"
+        src="../tskywebcontent/tsky-content/js/bilmur-4.min_i%3D12%26m%3D202503.js"></script>
+    <script>
+        (function () {
+            function getMobileUserAgentInfo() {
+                if (typeof wpcom_mobile_user_agent_info === 'object') {
+                    wpcom_mobile_user_agent_info.init();
+                    var mobileStatsQueryString = '';
+
+                    if (wpcom_mobile_user_agent_info.matchedPlatformName !== false) {
+                        mobileStatsQueryString += '&x_' + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+                    }
+
+                    if (wpcom_mobile_user_agent_info.matchedUserAgentName !== false) {
+                        mobileStatsQueryString += '&x_' + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+                    }
+
+                    if (wpcom_mobile_user_agent_info.isIPad()) {
+                        mobileStatsQueryString += '&x_' + 'ipad_views' + '=' + 'views';
+                    }
+
+                    if (mobileStatsQueryString != '') {
+                        new Image().src = document.location.protocol + '//pixel.tsky.com/g.gif?v=no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+                    }
+                }
+            }
+
+            document.addEventListener('DOMContentLoaded', getMobileUserAgentInfo);
+        })();
+    </script>
+
+</body>
+
+</html>
